@@ -1,1 +1,136 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Gajraj One, "Helvetica Neue", sans-serif; }
+* {font-family: Gajraj One}
+
+.block {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    margin-right: 5%;
+    gap: 20px
+}
+
+.bList {
+    border: 10px solid #972121;
+    flex-grow: 0;
+    border-radius: 2em;
+    box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+    padding-bottom: 5%;
+}
+.batonEDH{
+    position: absolute;
+    right: 76px;
+    top: 15px;
+    color: #972121;
+    font-size: 90%;
+    cursor: pointer;
+}
+.header {
+    text-align: center;
+    background-color: #972121;
+    color: white;
+    font-size: 200%;
+    padding: 15px 40px 10px 40px;
+    margin-bottom: 6%;
+    position: relative;
+}
+.header:hover{
+    .batonEDH {
+        color: white;
+    }
+}
+.item {
+    margin-left: 5%;
+    margin-right: 200%;
+    width: 290px;
+    font-size: 140%;
+    //margin-bottom: 3%;
+    display: flex;
+    gap: 1px;
+    color: #972121;
+}
+.batonED {
+    display: none;
+}
+.item:hover {
+    .batonED {
+        display: inline;
+        color: #972121;
+        -webkit-text-shadow: 0;
+        -moz-text-shadow: 0;
+        text-shadow: 0;
+    }
+    margin-right: 90%;
+    color: #ffa000;
+    -webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.baton {
+    text-align: center;
+    background-color: #972121;
+    color: white;
+    font-size: 150%;
+    padding: 15px 40px 10px 40px;
+    margin-bottom: 6%;
+    border-radius: 2em;
+    border-color: #00000000;
+    box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+}
+
+.baton:hover {
+    background-color: white;
+    color: #972121;
+    border-color: #972121;
+    cursor: pointer;
+}
+
+.load {
+    text-align: center;
+    background-color: #972121;
+    color: white;
+    font-size: 150%;
+    padding: 15px 40px 10px 40px;
+    margin: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 2em;
+    border-color: #00000000;
+    box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+}
+.backModal{
+    background-color: #0000009c;
+    z-index: 2;
+    position: fixed;
+    top: 12.2%;
+    width: 100vw;
+    height: 100vh;
+}
+.formS{
+    border: 10px solid #972121;
+    flex-grow: 0;
+    border-radius: 2em;
+    box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.252);
+    padding-bottom: 5%;
+    width: 260px;
+    background:white;
+    height: 110px;
+}
+.inp{
+    padding-left: 10%;
+    padding-right: 10%;
+    //margin-right: 200%;
+    width: 180px;
+    font-size: 140%;
+    //margin-bottom: 3%;
+    display: flex;
+    margin: 5%;
+    gap: 1px;
+    color: #972121;
+
+}

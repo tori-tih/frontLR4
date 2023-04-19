@@ -1,0 +1,18 @@
+$font-stack: Gajraj One, sans-serif;
+$primary-color: #ffffff;
+
+.SH {
+    z-index: 100;
+    background-color: #972121;
+    font: 200% $font-stack;
+    color: $primary-color;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none; 
+    box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+}
+
+.FF {
+    display: flex;
+    gap: 10px;
+}

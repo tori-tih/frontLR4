@@ -1,0 +1,29 @@
+<div *ngIf="!student; else loggedOut" class="load">Loading...</div>
+<ng-template #loggedOut>
+  <div *ngIf = "student" class="block">
+    <div>
+      <button class="baton" routerLink="/group/{{student.group}}"
+          [ngStyle]="{'font-size': '200%', 'padding': '0px 10px', 'margin-top': '5%'}">
+          🢠
+      </button>
+  </div>
+    <div  class="bList">
+      <div class="header">
+        <div>{{student.name}}</div>
+        <div class = "batonEDH">🖉</div>
+    </div>
+      <div class="item1">
+        Name: {{student.name}} <br>
+        Birthday: {{student.birthdate|date}} <br>
+        Number: {{student.number}} 
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- <p>STUDENT</p>
+<div *ngIf = "student">
+    Фамилия: {{student.name}} <br>
+    День рождения: {{student.birthdate|date}} <br>
+    Номер: {{student.number}} 
+</div>
+<div *ngIf = "!student">I'm not teapot</div> -->

@@ -1,0 +1,119 @@
+.block {
+    margin-top: 2%;
+    justify-content: center;
+}
+.bList {
+    border: 10px solid #972121;
+    flex-grow: 0;
+    border-radius: 2em;
+    box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+    padding-bottom: 5%;
+}
+.item {
+    //margin-left: 5%;
+    //margin-right: 200%;
+    width: 190px;
+    font-size: 140%;
+    //margin-bottom: 3%;
+    display: flex;
+    gap: 1px;
+    color: #972121;
+}
+.item:hover {
+    .batonED {
+        display: inline;
+        color: #972121;
+        -webkit-text-shadow: 0;
+        -moz-text-shadow: 0;
+        text-shadow: 0;
+    }
+    margin-right: 90%;
+    color: #ffa000;
+    -webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+    font-size: 150%;
+}
+// .bGroups {
+//     margin-left: 20%;
+//     margin-right: 10%;
+//     border: 10px solid #972121;
+//     flex-grow: 0.1;
+//     border-radius: 2em;
+//     box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+
+// }
+
+// .lG {
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 45%;
+//     font-size: 150%;
+//     margin-bottom: 3%;
+//     color: #972121;
+
+// }
+
+// .lG:hover {
+//     color: #ffa000;
+//     -webkit-text-shadow: 2px 2px 2px #000;
+//     -moz-text-shadow: 2px 2px 2px #000;
+//     text-shadow: 2px 2px 2px #000;
+//     cursor: pointer;
+//     font-size: 180%;
+
+//     // color: #972121; /* Меняем цвет текста */
+//     // -webkit-text-shadow: 5px 5px 5px #e3e3e3;
+//     // -moz-text-shadow: 5px 5px 5px #fd4545;
+//     //     text-shadow: 5px 5px 5px #350b0b;
+//     //     // -webkit-text-shadow: 5px 5px 5px #df2f2f;
+//     //     // -moz-text-shadow: 5px 5px 5px #000;
+//     //     //     text-shadow: 5px 5px 5px #a32525;
+//     //     -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+// }
+
+// .AAAA {
+//     margin-top: 2%;
+//     display: flex;
+// }
+
+// .POMOGITE {
+//     text-align: center;
+//     background-color: #972121;
+//     color: white;
+//     font-size: 200%;
+//     padding: 15px 40px 10px 40px;
+//     margin-bottom: 6%;
+// }
+// .baton{
+//     text-align: center;
+//     background-color: #972121;
+//     color: white;
+//     font-size: 150%;
+//     padding: 15px 40px 10px 40px;
+//     margin-bottom: 6%;
+//     border-radius: 2em;
+//     border-color: #00000000;
+//     box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+// }
+// .baton:hover{
+//     background-color: white ;
+//     color: #972121;
+//     border-color: #972121;
+//     cursor: pointer;
+// }
+// //TO-DO посмотреть шо как
+// .load{
+//     text-align: center;
+//     background-color: #972121;
+//     color: white;
+//     font-size: 150%;
+//     padding: 15px 40px 10px 40px;
+//     margin:2%;
+//     margin-left: 30%;
+//     margin-right: 30%;
+//     border-radius: 2em;
+//     border-color: #00000000;
+//     box-shadow: 00px 10px 20px rgba(0, 0, 0, 0.341);
+// }
