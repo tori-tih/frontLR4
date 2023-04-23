@@ -6,18 +6,23 @@
         <div class="header">GROUPS</div>
         <div class="item" *ngFor="let gs of groups">
           <div routerLink="group/{{gs.id}}">{{gs.name}}</div>
-          <div class="batonED" (click)="setForm(gs, 'EDIT')">🖉</div>
+          <div class="batonED" (click)="edit=true; group=gs">🖉</div>
           <div class="batonED">✖</div>
         </div>
       </div>
       <div [ngStyle]="{'margin-top': '7%'}">
-        <button class="baton" (click)="setForm(undefined,'CREATE')">ADD NEW GROUP</button>
+        <button class="baton" (click)="create=true">ADD NEW GROUP</button>
       </div>
     </div>
   </div>
 </ng-template>
-
-<div class="backModal" *ngIf="edit">
+<div  *ngIf="edit">
+  <app-group-modal [group]="group" title="EDIT" (event)="close()"/>
+</div>
+<div  *ngIf="create">
+  <app-group-modal  title="CREATE" (event)="close()"/>
+</div>
+<!-- <div class="backModal" *ngIf="edit">
   <div class="block">
     <div class="formS">
       <div class="header">{{title}}</div>
@@ -34,5 +39,5 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->
 

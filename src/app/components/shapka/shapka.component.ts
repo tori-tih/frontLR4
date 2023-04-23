@@ -8,7 +8,7 @@ import { ArrayType } from '@angular/compiler';
 })
 export class ShapkaComponent {
   mas = Array(3)
-  mas2 = Array(Math.floor(window.innerWidth/(13*this.shapkaService.name.length)))
+  mas2 = Array(Math.floor(window.innerWidth/(8*this.shapkaService.name.length)))
  constructor(public shapkaService:ShapkaService ){}
 }
 

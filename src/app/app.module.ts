@@ -11,22 +11,28 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { ShapkaComponent } from './components/shapka/shapka.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GroupModalComponent } from './components/modal/group-modal/group-modal.component';
+import { StudentModalComponent } from './components/modal/student-modal/student-modal.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     GroupsComponent,
     GroupComponent,
     StudentComponent,
-    ShapkaComponent
+    ShapkaComponent,
+    GroupModalComponent,
+    StudentModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule, 
+    MatSlideToggleModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,13 +13,10 @@ import { ShapkaService } from 'src/app/services/shapka.service';
 })
 export class GroupsComponent implements OnInit, OnDestroy{
   IL2?: Subscription
-  groups?: IGroup[] 
+  groups?: IGroup[]
+  group?: IGroup
   edit = false
-  title = "EDIT"
-  form = this.fb.group({
-    id: [NaN],
-    name: ['', [Validators.required]],
-  })
+  create = false
   constructor(private fb: FormBuilder, private groupService:GroupService, private shapkaService:ShapkaService){}
   ngOnInit(){
     this.shapkaService.name = " LOADING "
@@ -34,18 +31,9 @@ export class GroupsComponent implements OnInit, OnDestroy{
     }
     );
   }
-  setForm(group: IGroup|undefined, title: string){
-    this.edit=true; 
-    if(group)
-    this.form.setValue({id:group.id, name:group.name})
-    this.title = title
-  }
-  clearForm(){
-    this.edit=false; 
-    this.form.setValue({id:NaN, name:""})
-  }
-  confirm(){
-    console.log(this.form)
+  close(){
+    this.edit = false
+    this.create = false
   }
   ngOnDestroy(){
     this.IL2?.unsubscribe()

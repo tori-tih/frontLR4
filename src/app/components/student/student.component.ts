@@ -13,6 +13,7 @@ import { StudentService } from 'src/app/services/student.service';
 export class StudentComponent {
   IL2?: Subscription
   student?: IStudent
+  edit = false
   constructor(private route: ActivatedRoute, private studentService: StudentService, private shapkaService: ShapkaService) {
   }
   ngOnInit() {
@@ -22,11 +23,14 @@ export class StudentComponent {
         next: student => {
         this.student = student;
         this.shapkaService.name = "STUDENT";
-      }, 
+      },
         error: e => {
           this.shapkaService.name = "NOT FOUND"
         }
       });
+  }
+  close(){
+    this.edit = false
   }
   ngOnDestroy() {
     this.IL2?.unsubscribe()

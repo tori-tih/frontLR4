@@ -11,58 +11,49 @@
             <div *ngIf="group" class="bList">
                 <div class="header">
                     <div>{{group.name}}</div>
-                    <div class = "batonEDH" (click)="setForm()">🖉</div>
+                    <div class = "batonEDH" (click)="edit=true">🖉</div>
                 </div>
                 <div class="item" *ngFor="let s of group.students">
                     <div routerLink="/student/{{s.id}}">{{s.name}}</div>
-                    <div class="batonED" (click)="setForm2(s,'EDIT')">🖉</div>
+                    <div class="batonED" (click)="edit2=true; student=s">🖉</div>
                     <div class="batonED">✖</div>
                 </div>
             </div>
             <div [ngStyle]="{'margin-top': '7%'}">
-                <button class="baton" (click)="setForm2(undefined,'CREATE')">ADD NEW STUDENT</button>
+                <button class="baton" (click)="create=true">ADD NEW STUDENT</button>
+                <!-- (click)="setForm2(undefined,'CREATE')" -->
             </div>
         </div>
-
     </div>
 </ng-template>
 
 
-<div class="backModal" *ngIf="edit">
-    <div class="block">
-      <div class="formS">
-        <div class="header">EDIT</div>
-        <form class="formS" [formGroup]="form" (submit)="confirm()" class="flex flex-col gap-4">
-          <input class="inp" formControlName="name" placeholder="Name Group">
-          <div [ngStyle]="{'justify-content': 'space-around','display': 'flex'}">
-            <button class="baton" type="submit" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
-              OK
-            </button>
-            <button class="baton" (click)="clearForm()" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
-              CLOSE
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="backModal" *ngIf="edit2">
+<div  *ngIf="edit">
+  <app-group-modal [group]="group" title="EDIT" (event)="close()"/>
+</div>
+<div  *ngIf="edit2">
+  <app-student-modal [student]="student" title="EDIT" (event)="close()"/>
+</div>
+<div  *ngIf="create">
+  <app-student-modal title="CREATE" (event)="close()"/>
+</div>
+<!-- modalStudent -->
+  <!-- <div class="backModal" *ngIf="edit2">
     <div class="block">
       <div class="formS">
         <div class="header">{{title}}</div>
         <form class="formS" [formGroup]="formS" (submit)="confirm()" class="flex flex-col gap-4">
-          <input class="inp" formControlName="name" placeholder="Name Student">
+          <input maxlength=16 class="inp" formControlName="name" placeholder="Name Student">
           <input class="inp" formControlName="number" placeholder="Number">
-          <div [ngStyle]="{'justify-content': 'space-around','display': 'flex'}">
-            <button class="baton" type="submit" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
-              OK
-            </button>
-            <button class="baton" (click)="clearFormS()" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
-              CLOSE
-            </button>
-          </div>
         </form>
       </div>
     </div>
-  </div>
+    <div class="Mbaton">
+      <button class="baton" type="submit" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
+        OK
+      </button>
+      <button class="baton" (click)="clearFormS()" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
+        CLOSE
+      </button>
+    </div>
+  </div> -->
