@@ -17,27 +17,9 @@
   </div>
 </ng-template>
 <div  *ngIf="edit">
-  <app-group-modal [group]="group" title="EDIT" (event)="close()"/>
+  <app-group-modal [group]="group" title="EDIT" (event)="close()" (eventConfirm)="updGroup($event)"/>
 </div>
 <div  *ngIf="create">
-  <app-group-modal  title="CREATE" (event)="close()"/>
+  <app-group-modal  title="CREATE" (event)="close()" (eventConfirm)="updGroup($event)"/>
 </div>
-<!-- <div class="backModal" *ngIf="edit">
-  <div class="block">
-    <div class="formS">
-      <div class="header">{{title}}</div>
-      <form class="formS" [formGroup]="form" (submit)="confirm()" class="flex flex-col gap-4">
-        <input class="inp" formControlName="name" placeholder="Name Group">
-        <div [ngStyle]="{'justify-content': 'space-around','display': 'flex'}">
-          <button class="baton" type="submit" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
-            OK
-          </button>
-          <button class="baton" (click)="clearForm()" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
-            CLOSE
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div> -->
 

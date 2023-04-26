@@ -32,8 +32,21 @@ export class GroupsComponent implements OnInit, OnDestroy{
     );
   }
   close(){
+    this.create=false
     this.edit = false
-    this.create = false
+
+  }
+  updGroup(group: IGroup){
+    if(this.create){
+      this.create = false;
+      this.groups!.push(group);
+    }
+    if(this.edit){
+      this.edit = false;
+      this.groups = this.groups?.map(x=>x.id==group.id ? group:x)
+    }
+
+
   }
   ngOnDestroy(){
     this.IL2?.unsubscribe()

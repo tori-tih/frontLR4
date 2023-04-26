@@ -25,6 +25,9 @@ ngOnInit(){
 close() {
   this.event.emit()
 }
+add(){
+
+}
 confirm() {
   console.log(this.form);
   //кидать на бэк форму

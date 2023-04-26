@@ -3,12 +3,13 @@
     <div class="formS">
       <div class="header">{{title}}</div>
       <form [formGroup]="form" (submit)="confirm()" class="flex flex-col gap-4">
-        <input class="inp" formControlName="name" placeholder="Name Group">
+        <input class="inp" formControlName="name" placeholder="Name Group" type="text" pattern="^[0-9-a-zA-Z]+$">
       </form>
+      <div style="margin-left: 5%;">{{err}}</div>
     </div>
   </div>
   <div class="Mbaton">
-    <button class="baton" type="submit" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">
+    <button class="baton" type="submit" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}" (click)="add()">
       OK
     </button>
     <button class="baton" (click)="close()" [ngStyle]="{'font-size': '150%', 'padding': '0px 10px', 'margin-top': '1%'}">

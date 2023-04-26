@@ -44,6 +44,11 @@ export class GroupComponent {
     this.edit2 = false
     this.create = false
   }
+  closeGroup(group: IGroup){
+      this.edit = false;
+      this.group=group;
+      this.ngOnInit()
+  }
 
   ngOnDestroy() {
     this.IL2?.unsubscribe()
